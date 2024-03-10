@@ -1,0 +1,180 @@
+.background_div {
+    background-color:#000;
+}
+
+.d-block w-100 {
+    height: 80vw;
+}
+
+.carousel {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.para {
+    color: #027373;
+}
+
+
+.one_topic{
+    width: 100%;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+.heading3 {
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #222;
+}
+
+footer {
+    background-color: #027373;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#title {
+    margin-bottom: 5vh;
+}
+
+    
+.scrollable{
+    overflow-x:hidden;
+    overflow-y:auto;
+    height:80vh;
+    margin: auto;
+    width:90%;
+    scrollbar-width: thin; /* Set the width of the scrollbar */
+    scrollbar-color: var(--Dark-green) var(--Light-grey);
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 6px;
+}
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: var(--Light-grey);
+    border-radius: 4px;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.scrollable::-webkit-scrollbar-track {
+    background-color: var(--Dark-green);
+    border-radius: 4px;
+}
+
+
+.carousel-item{
+    width: 100%;
+    height: 100%;
+}
+
+
+.resp_img{
+    height: auto;
+    width: 60vw !important;
+}
+
+.heading_row{
+    margin: 20px 0px;
+}
+
+
+.scroll-row{
+    display: inline-flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 80vw;
+    height: 300px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+}
+.scroll-row::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Hide scrollbar for Firefox */
+.scroll-row {
+    scrollbar-width: 6px;
+}
+
+/* @keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(calc(-400%));
+    }
+    100% {
+        transform: translateX(0);
+    }
+} */
+
+
+
+.company-col{
+    width: 300px;
+    margin: 20px;
+    /* animation: scroll 10s linear infinite; */
+}
+
+.company-col img{
+    width: 200px;
+}
+
+.company-col p{
+    text-align: center;
+}
+
+.teamstruct_back{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color:var(--Dark-green);
+    display: flex;
+    align-items: center;
+}
+
+.teamstruct_back p{
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+.hierarchy{
+    /* border:2px solid white; */
+     display:flex;
+     flex-direction:column;
+     align-items:center;
+}
+
+@media only screen and (max-width: 767px) {
+    .resp_img{
+        width: 100%;
+        height: auto;
+    }
+
+    /* .company-col{
+        width: 300px;
+        margin: 20px;
+        animation: scroll 20s linear infinite;
+    } */
+
+    /* @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        50%{
+            transform: translateX(calc(-850%));
+        }
+        100% {
+            transform: translateX(0);
+        }
+    } */
+}

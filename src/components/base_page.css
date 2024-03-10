@@ -1,0 +1,12 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers content horizontally */
+  }
+
+  /* .maincontent_base{
+    background-image: url("../assets/Acceleracers_Logo_Dark.png");
+    background-repeat: no-repeat;
+    background-size:60%;
+    background-position: 150%;
+  } */

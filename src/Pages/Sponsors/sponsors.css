@@ -1,0 +1,31 @@
+.sponsors_main{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.sponsors_2{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    margin: 40px 0px;
+}
+
+.sponsors_2 .icon_cust{
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+
+@media only screen and (max-width: 767px) {
+   .tesla{
+        height: 100%;
+        width: 100%;
+   }
+   .autodesk{
+    height: 100%;
+    width: 100%;
+}
+
+}

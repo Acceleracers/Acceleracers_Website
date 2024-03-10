@@ -1,0 +1,51 @@
+.aboutfs h3{
+    text-align: left;
+}
+
+.aboutfs p{
+    text-align: justify;
+}
+
+.one_topic{
+    width: 100%;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+.scrollable{
+    overflow-x:hidden;
+    overflow-y:auto;
+    height:80vh;
+    margin: auto;
+    width:90%;
+    scrollbar-width: thin; /* Set the width of the scrollbar */
+    scrollbar-color: var(--Dark-green) var(--Light-grey);
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 6px;
+}
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: var(--Light-grey);
+    border-radius: 4px;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.scrollable::-webkit-scrollbar-track {
+    background-color: var(--Dark-green);
+    border-radius: 4px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .one_topic{
+        width: 100%;
+        margin: auto;
+        margin-top: 10vh;
+    }
+
+}
+  

@@ -1,0 +1,86 @@
+.cv {
+    color: rgb(255, 80, 80);
+    border: 2px solid rgb(255, 80, 80);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.ev {
+    color: rgb(93, 201, 255);
+    border: 2px solid rgb(93, 201, 255);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* .modal_div{
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh 10vw;
+} */
+.modal_div{
+    position: fixed;
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh 10vw;
+    top:0;
+    left: 0;
+    background-color: var(--Light-grey);
+    border: 2px solid var(--Dark-green);
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.teamImg{
+    height: 55vh;
+}
+
+.modal_scrollable{
+    overflow-x:hidden;
+    overflow-y:auto;
+    height:100%;
+}
+
+.resp_img_1{
+    width: 100%;
+}
+
+.trans {
+    opacity: 0; /* Initially hidden */
+    animation: fadeInFromLeft 1s ease-in-out forwards; /* Apply animation */
+}
+
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); /* Move the div outside the viewport to the left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Move the div back to its original position */
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .teamImg{
+        width: 60vw;
+        height: auto;
+    }
+    .resp_img_1{
+        width: 100%;
+        height: auto !important;
+    }
+    .modal_div{
+        width: 95vw;
+        height: 100vh;
+        margin: 10px;
+    }
+
+}
+.car_modal h6{
+    color: black;
+}
+.car_modal ul li{
+    color: black;
+    font-size: 20px ;
+    text-align: left;
+}
