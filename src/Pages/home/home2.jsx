@@ -3,6 +3,7 @@ import "./home.css"
 import { useState, useEffect, useRef } from 'react';
 import { Row, Col, Button, Carousel } from 'react-bootstrap';
 import BasePage from '../../components/base_page';
+import Footer from './../../components/footer';
 
 const Home2 = () => {
 
@@ -10,47 +11,56 @@ const Home2 = () => {
         {
             name: 'Tesla',
             icon: 'assets/Sponsors/tesla.png',
-            background:'transparent'
+            background:'white',
+            link: 'https://www.tesla.com/'
         },
         {
             name: 'AutoDesk',
             icon: 'assets/Sponsors/Autodesk2.svg',
-            background:'white'
+            background:'white',
+            link: 'https://www.autodesk.in/'
         },
         {
             name: 'Ketki Wiring Technologies',
             icon: 'assets/Sponsors/Ketki.jpg',
-            background:'transparent'
+            background:'transparent',
+            link: 'https://ketki-wiretech.com/'
         },
         {
             name: 'Flauta Customs',
             icon: 'assets/Sponsors/Flauta.png',
-            background:'transparent'
+            background:'transparent',
+            link: 'https://www.flautacustoms.com/'
         },
         {
             name: 'Raghasai Technologies',
             icon: 'assets/Sponsors/Raghasai.png',
-            background:'white'
+            background:'white',
+            link: '#'
         },
         {
             name: 'Rapid Harness',
             icon: 'assets/Sponsors/rapid-harness.png',
-            background:'transparent'
+            background:'transparent',
+            link: 'https://rapidharness.com/'
         },
         {
             name: 'Bender',
             icon: 'assets/Sponsors/Bender.svg',
-            background:'white'
+            background:'white',
+            link: '#'
         },
         {
             name: 'Belose',
             icon: 'assets/Sponsors/Belose.png',
-            background:'transparent'
+            background:'transparent',
+            link: '#'
         },
         {
             name: 'Infinity Industries',
             icon: 'assets/Sponsors/infinity-machining.png',
-            background:'white'
+            background:'white',
+            link: '#'
         }
     ]
 
@@ -89,7 +99,7 @@ const Home2 = () => {
                 </Col>
             </Row>
 
-            <Row className='heading_row'>
+            {/* <Row className='heading_row'>
                 <h1>Team Structure</h1>
             </Row>
             <Row>
@@ -103,21 +113,23 @@ const Home2 = () => {
                     Supported by Department Leads who specialize in various domains, our management team fosters a collaborative environment. 
                     In addition, our Junior Design Engineers contribute fresh perspectives and enthusiasm, collectively driving the team towards success in Formula Student competitions.</p>
                 </Col>
-            </Row>
+            </Row> */}
 
-            <Row className='heading_row'>
+            <Row className='heading_row' style={{margin:'20px 0px'}}>
                 <h1>Our Sponsors</h1>
             </Row>
                 <Row className="scroll-row">
                     {sponsors.map((item, index)=>(
                         <div key={index} className="company-col">
-                        <img src={item.icon} alt="" className="company-logo" style={{borderRadius:'10px',backgroundColor: item.background,padding:'10px'}}/>
-                        <h3 style={{width:'100%', textAlign:'center'}} className="company-name">{item.name}</h3>
+                            <a href={item.link} target="_blank">
+                            <img src={item.icon} alt="" className="company-logo" style={{borderRadius:'10px',backgroundColor: item.background,padding:'10px'}}/>
+                            </a>
+                        {/* <h3 style={{width:'100%', textAlign:'center'}} className="company-name">{item.name}</h3> */}
                         </div>
                     ))}                    
                 </Row>
 
-                
+            <Footer/>
 
 
         </div>

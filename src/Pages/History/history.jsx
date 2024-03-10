@@ -1,8 +1,9 @@
 import React from 'react'
 import "./history.css"
 import { useState, useEffect, useRef } from 'react';
-import { Row, Col, Button, Carousel, Card, Fade } from 'react-bootstrap';
+import { Row, Col} from 'react-bootstrap';
 import BasePage from '../../components/base_page';
+import Footer from './../../components/footer';
 
 
 const History = () => {
@@ -201,6 +202,7 @@ const History = () => {
                     </div>
                 </div>
             )}
+            <Footer/>
         </div>
     )
     return <BasePage maincontent={maincontent} />;

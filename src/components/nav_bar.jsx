@@ -26,7 +26,7 @@ const NavigationBar = () => {
 <Nav.Link as={Link} to="/Legacy">Our Legacy</Nav.Link>
           
           
-<Nav.Link as={Link} to="/Contact_Us">Contact Us</Nav.Link>
+{/* <Nav.Link as={Link} to="/Contact_Us">Contact Us</Nav.Link> */}
           
 
           

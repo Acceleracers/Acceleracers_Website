@@ -8,6 +8,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import BasePage from '../../components/base_page';
 import QRCode from 'qrcode.react';
 import ProgressBar from '../../components/progressbar';
+import Footer from './../../components/footer';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 const CrowdFunding = () => {
@@ -380,6 +381,7 @@ const CrowdFunding = () => {
                     <h1>Amount Collected</h1>
                     <ProgressBar/>
                     </div>
+                    <Footer/>
         </div>
         
     )

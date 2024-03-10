@@ -45,7 +45,7 @@ footer {
     overflow-y:auto;
     height:80vh;
     margin: auto;
-    width:90%;
+    width:95%;
     scrollbar-width: thin; /* Set the width of the scrollbar */
     scrollbar-color: var(--Dark-green) var(--Light-grey);
 }
@@ -89,7 +89,7 @@ footer {
     overflow-x: auto;
     overflow-y: hidden;
     width: 80vw;
-    height: 300px;
+    /* height: 300px; */
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
@@ -120,7 +120,7 @@ footer {
 
 .company-col{
     width: 300px;
-    margin: 20px;
+    margin:  0px 20px;
     /* animation: scroll 10s linear infinite; */
 }
 

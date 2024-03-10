@@ -9,16 +9,16 @@
 .one_topic{
     width: 100%;
     margin: auto;
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 
-.scrollable{
+/* .scrollable{
     overflow-x:hidden;
     overflow-y:auto;
     height:80vh;
     margin: auto;
-    width:90%;
-    scrollbar-width: thin; /* Set the width of the scrollbar */
+    width:95%;
+    scrollbar-width: thin;
     scrollbar-color: var(--Dark-green) var(--Light-grey);
 }
 
@@ -37,7 +37,7 @@
 .scrollable::-webkit-scrollbar-track {
     background-color: var(--Dark-green);
     border-radius: 4px;
-}
+} */
 
 
 @media only screen and (max-width: 767px) {

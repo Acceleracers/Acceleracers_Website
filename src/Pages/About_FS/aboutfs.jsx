@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
 import { Fade } from "react-awesome-reveal";
 import BasePage from '../../components/base_page';
+import Footer from './../../components/footer';
 
 
 const AboutFs = () => {
@@ -54,14 +55,15 @@ const AboutFs = () => {
                             </p>
                         </Col>
                         <Col xs={12} md={6}>
-                            <h6 style={{width:'100%',textAlign:'Center'}}>Dynamics(675 Points)</h6>
+                            <h6 style={{width:'100%',textAlign:'Center'}}>Dynamics (675 Points)</h6>
                             <p style={{width:'100%',textAlign:'Justify'}}>
                             In addition to the static events, the on-track
                             performance of the vehicles will be put to test
                             during the Dynamic events. The dynamic event
                             test assesses the car's capabilities in terms of
                             maximum longitudinal and lateral acceleration. race
-                            performance, efficiency. and endurance.
+                            performance, efficiency. and endurance.<br/>
+                            There are 5 Dynamic Events- Acceleration, SkidPad, Autocross, Endurance and Efficiency
                             </p>
                         </Col>
                     </Row>
@@ -76,7 +78,7 @@ const AboutFs = () => {
                 <Row style={{height:'fit-content'}}>
                     
                     <Col xs={12} md={6}>
-                    <Fade direction='right' delay={100} >
+                    <Fade direction='left' delay={100} >
                         <h3>Static Events</h3>
                         <h5>1) Engineering Design Event </h5>
                         <p>
@@ -105,7 +107,7 @@ const AboutFs = () => {
                         </Fade>
                     </Col>
                     <Col xs={12} md={6}>
-                        <Fade direction='left'> <img src="assets/AboutFS/statics.png" style={{width:'100%'}} alt="" /></Fade>
+                        <Fade direction='right'> <img src="assets/AboutFS/statics.png" style={{width:'100%'}} alt="" /></Fade>
                     </Col>
                 </Row>
             </div>
@@ -116,7 +118,7 @@ const AboutFs = () => {
                     <Fade direction='left'> <img src="assets/AboutFS/dynamics.jpg" style={{width:'100%'}} alt="" /></Fade>
                 </Col>
                     <Col xs={12} md={6}>
-                    <Fade direction='left' delay={100} >
+                    <Fade direction='right' delay={100} >
                         <h3>Dynamic Events</h3>
                         <h5>1) Acceleration </h5>
                         <p>
@@ -136,25 +138,22 @@ const AboutFs = () => {
                             chicanes etc. The length of the autocross track is tess
                             than 1.5 km.
                         </p>
-                        <h5>4) Endurance and Efficiency</h5>
+                        <h5>4) Endurance</h5>
                         <p>
-The endurance track is a closed lap circuit built similarly to an autocross
-track. The length of one tap of the endurance track is approximately 1 km.
-The length of the complete endurance is approximately 22 km. There is
-only one run for the endurance event.The first driver will drive for 11 km and
-will then be signaled into the driver change area. After the driver change, the second driver will drive for an additional 11 km and will
-be signaled to exit the track after crossing the finish line.Wheel-to-wheel racing is prohibited. <br/>
-FOR Electric Vehicles the endurance energy is calculated as
-the time integrated value of the measured voltage multiplied by
-the measured current logged by the energy meter (data logger).
-
+                            The endurance track is a closed lap circuit built similarly to an autocross
+                            track. The length of one tap of the endurance track is approximately 1 km.
+                            The length of the complete endurance is approximately 22 km.
                         </p>
+                        <h5>5) Efficiency</h5>
+                        <p> Endurance energy is calculated as
+                            the time integrated value of the measured voltage multiplied by
+                            the measured current logged by the energy meter</p>
                         </Fade>
                     </Col>
                     
                 </Row>
             </div>
-        
+        <Footer/>
 
 
         </div>

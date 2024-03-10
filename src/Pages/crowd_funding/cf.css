@@ -2,19 +2,18 @@ ul{
     color: var(--Light-green);
 }
 
-.scrollable{
+.modal_div.scrollable{
+    height: 100vh;
+    width: 100vw;
+}
+/* .scrollable{
     overflow-x:hidden;
     overflow-y:auto;
     height:80vh;
     margin: auto;
     width:90%;
-    scrollbar-width: thin; /* Set the width of the scrollbar */
+    scrollbar-width: thin;
     scrollbar-color: var(--Dark-green) var(--Light-grey);
-}
-
-.modal_div.scrollable{
-    height: 100vh;
-    width: 100vw;
 }
 
 .scrollable::-webkit-scrollbar {
@@ -32,7 +31,7 @@ ul{
 .scrollable::-webkit-scrollbar-track {
     background-color: var(--Dark-green);
     border-radius: 4px;
-}
+} */
 
 .cv_cf .card .h5{
     color: rgb(255, 80, 80) ;

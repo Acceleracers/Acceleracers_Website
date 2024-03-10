@@ -44,7 +44,8 @@ const Contact = () => {
           console.error('Error submitting form:', error);
         });
         setTimeout(() => {
-          window.location.reload();
+          var currentLocation = window.location.href;
+          window.location.href = currentLocation;
         }, 2000);
       };
 
