@@ -40,10 +40,10 @@ const Footer = () => {
         .catch(error => {
           console.error('Error submitting form:', error);
         });
-        setTimeout(() => {
-          var currentLocation = window.location.href;
-          window.location.href = currentLocation;
-        }, 2000);
+        // setTimeout(() => {
+        //   var currentLocation = window.location.href;
+        //   window.location.href = currentLocation;
+        // }, 2000);
       };
 
 

@@ -49,9 +49,9 @@ const AboutFs = () => {
                                 on design. construction, marketing. and pricing,
                                 require collaboration and expertise from various
                                 disciplines. Teams can earn up to 325 points out of
-                                1,000 in these events. with different weightings- The
+                                1,000 in these events.The
                                 evaluation is done by experienced experts from the
-                                automobile. motorsport. and supply industries.
+                                automobile, motorsport, and supply industries.
                             </p>
                         </Col>
                         <Col xs={12} md={6}>
@@ -124,7 +124,7 @@ const AboutFs = () => {
                         <p>
                             The acceleration course is a straight line
                             with a length of 75 m from starting line to
-                            finish tine.
+                            finish line.
                         </p>
                         <h5>2) SkidPad</h5>
                         <p>
@@ -133,9 +133,9 @@ const AboutFs = () => {
                         </p>
                         <h5>3) Autocross</h5>
                         <p>
-                            The autocross track tayout is a handling course built
+                            The autocross track layout is a handling course built
                             to contain straights, constant turns, hairpins. slaloms.
-                            chicanes etc. The length of the autocross track is tess
+                            chicanes etc. The length of the autocross track is less
                             than 1.5 km.
                         </p>
                         <h5>4) Endurance</h5>
