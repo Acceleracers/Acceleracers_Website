@@ -64,7 +64,7 @@ const Footer = () => {
                     <h1 style={{color:'black'}}>Contact Us</h1>
                     <Form onSubmit={handleSubmit}>
                     <Row>
-                        <Col>
+                        <Col md={6} xs={12}>
                             <Form.Group controlId="formName">
                             <Form.Label style={{color:'black'}}>Your Name <span className='red'>*</span></Form.Label>
                             <Form.Control
@@ -77,7 +77,7 @@ const Footer = () => {
                             />
                             </Form.Group>
                         </Col>
-                        <Col>
+                        <Col md={6} xs={12}>
                             <Form.Group controlId="formCompanyName">
                             <Form.Label style={{color:'black'}}>Company Name</Form.Label>
                             <Form.Control
@@ -92,7 +92,7 @@ const Footer = () => {
                     </Row>
                         
                     <Row>
-                        <Col>
+                        <Col md={6} xs={12}>
                             <Form.Group controlId="formEmail">
                             <Form.Label style={{color:'black'}}>Email address<span className='red'>*</span></Form.Label>
                             <Form.Control
@@ -105,7 +105,7 @@ const Footer = () => {
                             />
                             </Form.Group>
                         </Col>
-                        <Col>
+                        <Col md={6} xs={12}>
                             <Form.Group controlId="formReason">
                             <Form.Label style={{color:'black'}}>Reason for contacting?<span className='red'>*</span></Form.Label>
                             <Form.Control

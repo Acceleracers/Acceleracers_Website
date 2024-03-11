@@ -5,9 +5,53 @@ import { Row, Col, Button } from 'react-bootstrap';
 import { Fade } from "react-awesome-reveal";
 import BasePage from '../../components/base_page';
 import Footer from './../../components/footer';
+import Preloader from '../../components/preloader';
 
 
 const AboutFs = () => {
+    const [isloaded, setisloaded] = useState(false)
+    const [competition, setCompetition] = useState("")
+    const [statics, setstatics] = useState("")
+    const [dynamics, setdynamics] = useState("")
+    const [cost, setcost] = useState("")
+    const [EngineeringDesign, setEngineeringDesign] = useState("")
+    const [BuisnessPlan, setBuisnessPlan] = useState("")
+    const [Acceleration, setAcceleration] = useState("")
+    const [SkidPad, setSkidPad] = useState("")
+    const [Autocross, setAutocross] = useState("")
+    const [Endurance, setEndurance] = useState("")
+    const [Efficiency, setEfficiency] = useState("")
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await fetch('https://script.google.com/macros/s/AKfycbyiBEva25ViD46Wpl59-j6DYTla88wv73B57y3S8EFAugvJYVZW-DDbIDkcwiz0yJPE/exec?page=AboutFS');
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            const responseData = await response.json();
+            setCompetition(responseData[0][1])
+            setstatics(responseData[1][1])
+            setdynamics(responseData[2][1])
+            setcost(responseData[3][1])
+            setEngineeringDesign(responseData[4][1])
+            setBuisnessPlan(responseData[5][1])
+            setAcceleration(responseData[6][1])
+            setSkidPad(responseData[7][1])
+            setAutocross(responseData[8][1])
+            setEndurance(responseData[9][1])
+            setEfficiency(responseData[10][1])
+            setisloaded(true)
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+        fetchData();
+      }, []);
+    while (!isloaded){
+
+        return <Preloader />;
+    }
     const maincontent = (
         <div className='aboutfs'>
         <h1> About Formula Student</h1>
@@ -20,15 +64,7 @@ const AboutFs = () => {
                     </Col>
                     <Col xs={12} md={6}>
                         <h3>The Competition</h3>
-                        <p>Teams in the competition undergo evaluation from
-                            industry experts, who assess their engineering design,
-                            marketing plans, and manufacturing strategy. Following a
-                            successful technical inspection of the vehicle, teams must
-                            navigate a series of dynamic track events focused on lap
-                            times. <br/>Throughout a combination of static and dynamic
-                            events, each team has the opportunity to accumulate a
-                            total of 1000 points. This evaluation process also entails
-                            providing evidence of their vehicle's efficiency.</p>
+                        <p>{competition}</p>
                     </Col>
                 </Row>
             </div>
@@ -42,28 +78,14 @@ const AboutFs = () => {
                     <Row>
                         <Col xs={12} md={6}>
                             <h6 style={{width:'100%',textAlign:'Center'}}>Statics (325 points)</h6>
-                            <p style={{width:'100%',textAlign:'Justify'}}>The Formula Bharat competition acquaints students
-                                with the interdisciplinary nature of the automotive
-                                industry. covering technical. economic. and
-                                communication skills. The three static events. focusing
-                                on design. construction, marketing. and pricing,
-                                require collaboration and expertise from various
-                                disciplines. Teams can earn up to 325 points out of
-                                1,000 in these events.The
-                                evaluation is done by experienced experts from the
-                                automobile, motorsport, and supply industries.
+                            <p style={{width:'100%',textAlign:'Justify'}}>
+                                {statics}
                             </p>
                         </Col>
                         <Col xs={12} md={6}>
                             <h6 style={{width:'100%',textAlign:'Center'}}>Dynamics (675 Points)</h6>
-                            <p style={{width:'100%',textAlign:'Justify'}}>
-                            In addition to the static events, the on-track
-                            performance of the vehicles will be put to test
-                            during the Dynamic events. The dynamic event
-                            test assesses the car's capabilities in terms of
-                            maximum longitudinal and lateral acceleration. race
-                            performance, efficiency. and endurance.<br/>
-                            There are 5 Dynamic Events- Acceleration, SkidPad, Autocross, Endurance and Efficiency
+                            <p style={{width:'100%',textAlign:'Justify'}}> 
+                            {dynamics}
                             </p>
                         </Col>
                     </Row>
@@ -81,28 +103,13 @@ const AboutFs = () => {
                     <Fade direction='left' delay={100} >
                         <h3>Static Events</h3>
                         <h5>1) Engineering Design Event </h5>
-                        <p>
-                            The design event aims to assess the engineering process and
-                            dedication invested by students in creating a vehicle that
-                            aligns With the competition's objectives.
+                        <p>{EngineeringDesign}
                         </p>
                         <h5>2) Cost & Manufacturing</h5>
-                        <p>
-                            The goal of the cost and manufacturing
-                            event is to assess the team's comprehension
-                            of manufacturing processes and the costs
-                            involved in building a prototype race car.
-                            This involves making trade-off decisions
-                            between content and cost, as well as
-                            understanding the distinctions between
-                            prototype andmass production.
+                        <p> {cost}
                         </p>
                         <h5>3) Buisness Plan Presentation</h5>
-                        <p>
-                            The purpose of the BPP is to assess the team's capacity to
-                            formulate and present a comprehensive business model that
-                            illustrates the potential for their product - a prototype race
-                            car - to be a lucrative business venture.
+                        <p> {BuisnessPlan}
                         </p>
                         </Fade>
                     </Col>
@@ -121,33 +128,19 @@ const AboutFs = () => {
                     <Fade direction='right' delay={100} >
                         <h3>Dynamic Events</h3>
                         <h5>1) Acceleration </h5>
-                        <p>
-                            The acceleration course is a straight line
-                            with a length of 75 m from starting line to
-                            finish line.
+                        <p> {Acceleration}
                         </p>
                         <h5>2) SkidPad</h5>
-                        <p>
-                            The skidpad course consists of two pairs of concentric circles
-                            in a figure of eight pattern. 
+                        <p> {SkidPad}
                         </p>
                         <h5>3) Autocross</h5>
-                        <p>
-                            The autocross track layout is a handling course built
-                            to contain straights, constant turns, hairpins. slaloms.
-                            chicanes etc. The length of the autocross track is less
-                            than 1.5 km.
+                        <p>{Autocross}
                         </p>
                         <h5>4) Endurance</h5>
-                        <p>
-                            The endurance track is a closed lap circuit built similarly to an autocross
-                            track. The length of one tap of the endurance track is approximately 1 km.
-                            The length of the complete endurance is approximately 22 km.
+                        <p> {Endurance}
                         </p>
                         <h5>5) Efficiency</h5>
-                        <p> Endurance energy is calculated as
-                            the time integrated value of the measured voltage multiplied by
-                            the measured current logged by the energy meter</p>
+                        <p>{Efficiency}</p>
                         </Fade>
                     </Col>
                     

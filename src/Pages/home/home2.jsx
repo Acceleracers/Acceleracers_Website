@@ -4,70 +4,41 @@ import { useState, useEffect, useRef } from 'react';
 import { Row, Col, Button, Carousel } from 'react-bootstrap';
 import BasePage from '../../components/base_page';
 import Footer from './../../components/footer';
+import Preloader from '../../components/preloader';
 
 const Home2 = () => {
+    const [isloaded, setisloaded] = useState(false)
+    const [aboutUs, setAboutus] = useState("")
+    const [sponsors, setSponsors] = useState("")
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await fetch('https://script.google.com/macros/s/AKfycbyiBEva25ViD46Wpl59-j6DYTla88wv73B57y3S8EFAugvJYVZW-DDbIDkcwiz0yJPE/exec?page=Home');
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            const responseData = await response.json();
+            setAboutus(responseData[0][1])
+            setSponsors(JSON.parse(responseData[1][1]))
+            setisloaded(true)
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+    
+        fetchData();
+      }, []);
+    while (!isloaded){
 
-    const sponsors = [
-        {
-            name: 'Tesla',
-            icon: 'assets/Sponsors/tesla.png',
-            background:'white',
-            link: 'https://www.tesla.com/'
-        },
-        {
-            name: 'AutoDesk',
-            icon: 'assets/Sponsors/Autodesk2.svg',
-            background:'white',
-            link: 'https://www.autodesk.in/'
-        },
-        {
-            name: 'Ketki Wiring Technologies',
-            icon: 'assets/Sponsors/Ketki.jpg',
-            background:'transparent',
-            link: 'https://ketki-wiretech.com/'
-        },
-        {
-            name: 'Flauta Customs',
-            icon: 'assets/Sponsors/Flauta.png',
-            background:'transparent',
-            link: 'https://www.flautacustoms.com/'
-        },
-        {
-            name: 'Raghasai Technologies',
-            icon: 'assets/Sponsors/Raghasai.png',
-            background:'white',
-            link: '#'
-        },
-        {
-            name: 'Rapid Harness',
-            icon: 'assets/Sponsors/rapid-harness.png',
-            background:'transparent',
-            link: 'https://rapidharness.com/'
-        },
-        {
-            name: 'Bender',
-            icon: 'assets/Sponsors/Bender.svg',
-            background:'white',
-            link: '#'
-        },
-        {
-            name: 'Belose',
-            icon: 'assets/Sponsors/Belose.png',
-            background:'transparent',
-            link: '#'
-        },
-        {
-            name: 'Infinity Industries',
-            icon: 'assets/Sponsors/infinity-machining.png',
-            background:'white',
-            link: '#'
-        }
-    ]
+        return <Preloader />;
+    }
+
 
     const maincontent = (
         <div className="scrollable" style={{padding:'10px'}}>
             <h1>Team Acceleracers Electric</h1>
-            <img className='resp_img' src="assets/home/home_page_1.jpg" alt="" />
+            {/* <img className='resp_img' src="assets/home/home_page_1.jpg" alt="" /> */}
+            <img className='resp_img' src="https://lh3.googleusercontent.com/drive-viewer/AKGpihY0eVjlWPO3m7_tK4UgkZYqIHO85YknWRrhUJ71hmLZU_Sbp5fDr-kYCSF49sNKpOUC_a-x76zQQiX35D-FSOMUpeOrTA=s1600" alt="" />
             <Row className='heading_row'>
                 <h1>About Us</h1>
             </Row>

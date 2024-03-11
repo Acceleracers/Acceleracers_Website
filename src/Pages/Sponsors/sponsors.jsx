@@ -8,6 +8,7 @@ import Footer from './../../components/footer';
 
 
 const Sponsors = () => {
+    
     const maincontent = (
         <div style={{backgroundColor:'white'}}>
             <h1 style={{color:'black'}}> Our Sponsors</h1>
