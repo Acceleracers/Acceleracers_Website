@@ -5,11 +5,15 @@ import { Row, Col, Button, Carousel } from 'react-bootstrap';
 import BasePage from '../../components/base_page';
 import Footer from './../../components/footer';
 import Preloader from '../../components/preloader';
+import CountUp from '../../components/animate_card';
 
 const Home2 = () => {
     const [isloaded, setisloaded] = useState(false)
     const [aboutUs, setAboutus] = useState("")
     const [sponsors, setSponsors] = useState("")
+    const [carsbuilt, setCarsbuilt] = useState(0)
+    const [years_exp, setYearsExp] = useState(0)
+    const [teammembers, setTeammem] = useState(0)
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -20,6 +24,8 @@ const Home2 = () => {
             const responseData = await response.json();
             setAboutus(responseData[0][1])
             setSponsors(JSON.parse(responseData[1][1]))
+            setCarsbuilt(JSON.parse(responseData[2][1]))
+            setTeammem(JSON.parse(responseData[3][1]))
             setisloaded(true)
           } catch (error) {
             console.error('Error fetching data:', error);
@@ -28,6 +34,10 @@ const Home2 = () => {
     
         fetchData();
       }, []);
+        const currentDate = new Date();
+        const currentYear = currentDate.getFullYear();
+        const yearsSince2011 = currentYear - 2011;
+
     while (!isloaded){
 
         return <Preloader />;
@@ -60,13 +70,39 @@ const Home2 = () => {
                         finesse. Every team member has imbibed in themselves
                         virtues of patience, perseverance and precision, the
                         necessities for an organization to be successful, which is our
-                        aim. Apart from the technicalities Of making a car, we also
+                        aim. Apart from the technicalities of making a car, we also
                         expose ourselves to various non-technical aspects like
                         sponsorship, marketing, finance and media.
                     </p>
                 </Col>
                 <Col md={6} xs={12}>
                     <img src="assets/home/Team_pic.jpg" style={{width:'100%'}} alt="" />
+                </Col>
+            </Row>
+            <Row style={{display:'flex',width:'100%',margin:'10vh 0px'}}>
+                <Col className='flex_center'>
+                    <Row>
+                        <h1>Team Members</h1>
+                    </Row>
+                    <Row>
+                        <CountUp x={teammembers} />
+                    </Row>
+                </Col>
+                <Col className='flex_center'>
+                    <Row>
+                        <h1>Years</h1>
+                    </Row>
+                    <Row>
+                    <CountUp x={yearsSince2011} />
+                    </Row>
+                </Col>
+                <Col className='flex_center'>
+                    <Row>
+                        <h1>Cars</h1>
+                    </Row>
+                    <Row>
+                    <CountUp x={carsbuilt} />
+                    </Row>
                 </Col>
             </Row>
 

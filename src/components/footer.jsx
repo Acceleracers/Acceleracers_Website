@@ -54,8 +54,8 @@ const Footer = () => {
             <h1 style={{textAlign:'left', color:'black'}}>Contact</h1>
             <p style={{color:'black'}}>
                 acceleracers@mitwpu.edu.in<br/><br/>
-                Captain: <br/>Kaustubh Borkhade<br/>
-                acceleracers.kaustubh@gmail.com
+                Captain: <br/>Aditya Dandgawhal<br/>
+                adityadan.acceleracers@gmail.com
             </p>
             </Col>
             <Col md={8} xs ={12}>

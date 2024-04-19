@@ -46,7 +46,7 @@ const History = () => {
         //     'type' : 'CV',
         //     'car' : '21C',
         //     'description':["Formula Bharat 2021"],
-        //     'Achievements' : ['Overall 4th Position','4th in Design Presentation','2nd in Business Presentation'],
+        //     'Achievements' : ['Overall 4th Position','2nd in Business Presentation','4th in Design Presentation'],
         //     'teampic': false
         // },
         {

@@ -82,7 +82,11 @@ footer {
 .heading_row{
     margin: 20px 0px;
 }
-
+.flex_center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .scroll-row{
     display: inline-flex;
